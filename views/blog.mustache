@@ -1,0 +1,55 @@
+<html>
+<head></head>
+
+<body>
+
+  <form action='/addpost' method="POST">
+    <input type="text" name="title" placeholder="title" />
+    <textarea name="body"></textarea>
+    <button type="submit">Save</button>
+  </form>
+
+<ul>
+these should print
+{{#blogs}}
+
+
+<li>
+  <div>
+  {{title}}
+  </div>
+  <p>
+  {{blogtitle}}
+  {{blogdescription}}
+  {{postid}}
+
+  
+  </p>
+  <form action="/delete-post" method="POST">
+    <input type="hidden" name="postId" value="{{postid}}" />
+    <button type="submit">Delete</button>
+   
+  </form>
+
+   <a href="/update-post/{{postid}}"><button>Edit</button></a>
+
+   
+  <form action="/add-comment" method= "POST">
+  <input type="text" name="comment" placeholder="Add Nice comment" />'
+  <input type="hidden" name="postId" value="{{postid}}" />
+  <button type="submit">Submit comment</button>
+
+  
+</li>
+
+{{/blogs}}
+
+
+
+
+</ul>
+
+
+</body>
+
+</html>

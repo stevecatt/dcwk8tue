@@ -1,0 +1,18 @@
+<html>
+<head></head>
+
+<body>
+
+  <h1>Edit Post</h1>
+
+  <form action='/update-post' method="POST">
+    <input type='hidden' name='postId' value={{postid}} />
+    <input type="text" name="title" value="{{blogtitle}}" />
+    <input type="text" name="body" value="{{blogdescription}}"/> 
+    <button type="submit">Update</button>
+
+  </form>
+
+</body>
+
+</html>
